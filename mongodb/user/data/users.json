@@ -1,0 +1,12 @@
+[
+  {
+    "_id": "57bb44dd21d2befb7ca3f001",
+    "name": "User 1",
+    "age": 20
+  },
+  {
+    "_id": "57bb44dd21d2befb7ca3f002",
+    "name": "User 2",
+    "age": 28
+  }
+]

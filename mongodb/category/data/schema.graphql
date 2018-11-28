@@ -1,0 +1,793 @@
+input _idOperatorsFiltercategoryInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterFindManycategoryInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterFindOnecategoryInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterRemoveManycategoryInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterRemoveOnecategoryInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterUpdateManycategoryInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterUpdateOnecategoryInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+type category {
+  name: String
+  title: String
+  content: String
+  _id: MongoID!
+}
+
+"""A connection to a list of items."""
+type categoryConnection {
+  """Total object count."""
+  count: Int!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """Information to aid in pagination."""
+  edges: [categoryEdge!]!
+}
+
+"""An edge in a connection."""
+type categoryEdge {
+  """The item at the end of the edge"""
+  node: category!
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+"""List of items with pagination."""
+type categoryPagination {
+  """Total object count."""
+  count: Int
+
+  """Array of objects."""
+  items: [category]
+
+  """Information to aid in pagination."""
+  pageInfo: PaginationInfo!
+}
+
+input ContentOperatorsFiltercategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input ContentOperatorsFilterFindManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input ContentOperatorsFilterFindOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input ContentOperatorsFilterRemoveManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input ContentOperatorsFilterRemoveOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input ContentOperatorsFilterUpdateManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input ContentOperatorsFilterUpdateOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input CreateManycategoryInput {
+  name: String
+  title: String
+  content: String
+}
+
+type CreateManycategoryPayload {
+  """Created document ID"""
+  recordIds: [MongoID]!
+
+  """Created documents"""
+  records: [category]!
+
+  """Count of all documents created"""
+  createCount: Int!
+}
+
+input CreateOnecategoryInput {
+  name: String
+  title: String
+  content: String
+}
+
+type CreateOnecategoryPayload {
+  """Created document ID"""
+  recordId: MongoID
+
+  """Created document"""
+  record: category
+}
+
+input FiltercategoryInput {
+  name: String
+  title: String
+  content: String
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFiltercategoryInput
+  OR: [FiltercategoryInput!]
+  AND: [FiltercategoryInput!]
+}
+
+input FilterFindManycategoryInput {
+  name: String
+  title: String
+  content: String
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterFindManycategoryInput
+  OR: [FilterFindManycategoryInput!]
+  AND: [FilterFindManycategoryInput!]
+}
+
+input FilterFindOnecategoryInput {
+  name: String
+  title: String
+  content: String
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterFindOnecategoryInput
+  OR: [FilterFindOnecategoryInput!]
+  AND: [FilterFindOnecategoryInput!]
+}
+
+input FilterRemoveManycategoryInput {
+  name: String
+  title: String
+  content: String
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterRemoveManycategoryInput
+  OR: [FilterRemoveManycategoryInput!]
+  AND: [FilterRemoveManycategoryInput!]
+}
+
+input FilterRemoveOnecategoryInput {
+  name: String
+  title: String
+  content: String
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterRemoveOnecategoryInput
+  OR: [FilterRemoveOnecategoryInput!]
+  AND: [FilterRemoveOnecategoryInput!]
+}
+
+input FilterUpdateManycategoryInput {
+  name: String
+  title: String
+  content: String
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterUpdateManycategoryInput
+  OR: [FilterUpdateManycategoryInput!]
+  AND: [FilterUpdateManycategoryInput!]
+}
+
+input FilterUpdateOnecategoryInput {
+  name: String
+  title: String
+  content: String
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterUpdateOnecategoryInput
+  OR: [FilterUpdateOnecategoryInput!]
+  AND: [FilterUpdateOnecategoryInput!]
+}
+
+"""
+The `ID` scalar type represents a unique MongoDB identifier in collection.
+MongoDB by default use 12-byte ObjectId value
+(https://docs.mongodb.com/manual/reference/bson-types/#objectid). But MongoDB
+also may accepts string or integer as correct values for _id field.
+"""
+scalar MongoID
+
+type Mutation {
+  """
+  Create one document with mongoose defaults, setters, hooks and validation
+  """
+  categoryCreate(record: CreateOnecategoryInput!): CreateOnecategoryPayload
+
+  """
+  Creates Many documents with mongoose defaults, setters, hooks and validation
+  """
+  categoryCreateMany(records: [CreateManycategoryInput!]!): CreateManycategoryPayload
+
+  """
+  Update one document: 1) Retrieve one document by findById. 2) Apply updates to
+  mongoose document. 3) Mongoose applies defaults, setters, hooks and
+  validation. 4) And save it.
+  """
+  categoryUpdateById(record: UpdateByIdcategoryInput!): UpdateByIdcategoryPayload
+
+  """
+  Update one document: 1) Retrieve one document via findOne. 2) Apply updates to
+  mongoose document. 3) Mongoose applies defaults, setters, hooks and
+  validation. 4) And save it.
+  """
+  categoryUpdateOne(
+    record: UpdateOnecategoryInput!
+
+    """Filter by fields"""
+    filter: FilterUpdateOnecategoryInput
+    sort: SortUpdateOnecategoryInput
+    skip: Int
+  ): UpdateOnecategoryPayload
+
+  """
+  Update many documents without returning them: Use Query.update mongoose
+  method. Do not apply mongoose defaults, setters, hooks and validation. 
+  """
+  categoryUpdateMany(
+    record: UpdateManycategoryInput!
+
+    """Filter by fields"""
+    filter: FilterUpdateManycategoryInput
+    sort: SortUpdateManycategoryInput
+    skip: Int
+    limit: Int = 1000
+  ): UpdateManycategoryPayload
+
+  """
+  Remove one document: 1) Retrieve one document and remove with hooks via findByIdAndRemove. 2) Return removed document.
+  """
+  categoryRemoveById(_id: MongoID!): RemoveByIdcategoryPayload
+
+  """
+  Remove one document: 1) Remove with hooks via findOneAndRemove. 2) Return removed document.
+  """
+  categoryRemoveOne(
+    """Filter by fields"""
+    filter: FilterRemoveOnecategoryInput
+    sort: SortRemoveOnecategoryInput
+  ): RemoveOnecategoryPayload
+
+  """
+  Remove many documents without returning them: Use Query.remove mongoose
+  method. Do not apply mongoose defaults, setters, hooks and validation. 
+  """
+  categoryRemoveMany(
+    """Filter by fields"""
+    filter: FilterRemoveManycategoryInput!
+  ): RemoveManycategoryPayload
+}
+
+input NameOperatorsFiltercategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterFindManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterFindOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterRemoveManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterRemoveOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterUpdateManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterUpdateOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFiltercategoryInput {
+  name: NameOperatorsFiltercategoryInput
+  title: TitleOperatorsFiltercategoryInput
+  content: ContentOperatorsFiltercategoryInput
+  _id: _idOperatorsFiltercategoryInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterFindManycategoryInput {
+  name: NameOperatorsFilterFindManycategoryInput
+  title: TitleOperatorsFilterFindManycategoryInput
+  content: ContentOperatorsFilterFindManycategoryInput
+  _id: _idOperatorsFilterFindManycategoryInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterFindOnecategoryInput {
+  name: NameOperatorsFilterFindOnecategoryInput
+  title: TitleOperatorsFilterFindOnecategoryInput
+  content: ContentOperatorsFilterFindOnecategoryInput
+  _id: _idOperatorsFilterFindOnecategoryInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterRemoveManycategoryInput {
+  name: NameOperatorsFilterRemoveManycategoryInput
+  title: TitleOperatorsFilterRemoveManycategoryInput
+  content: ContentOperatorsFilterRemoveManycategoryInput
+  _id: _idOperatorsFilterRemoveManycategoryInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterRemoveOnecategoryInput {
+  name: NameOperatorsFilterRemoveOnecategoryInput
+  title: TitleOperatorsFilterRemoveOnecategoryInput
+  content: ContentOperatorsFilterRemoveOnecategoryInput
+  _id: _idOperatorsFilterRemoveOnecategoryInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterUpdateManycategoryInput {
+  name: NameOperatorsFilterUpdateManycategoryInput
+  title: TitleOperatorsFilterUpdateManycategoryInput
+  content: ContentOperatorsFilterUpdateManycategoryInput
+  _id: _idOperatorsFilterUpdateManycategoryInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterUpdateOnecategoryInput {
+  name: NameOperatorsFilterUpdateOnecategoryInput
+  title: TitleOperatorsFilterUpdateOnecategoryInput
+  content: ContentOperatorsFilterUpdateOnecategoryInput
+  _id: _idOperatorsFilterUpdateOnecategoryInput
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+"""Information about pagination."""
+type PaginationInfo {
+  """Current page number"""
+  currentPage: Int!
+
+  """Number of items per page"""
+  perPage: Int!
+
+  """Total number of pages"""
+  pageCount: Int
+
+  """Total number of items"""
+  itemCount: Int
+
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean
+}
+
+type Query {
+  categoryById(_id: MongoID!): category
+  categoryByIds(_ids: [MongoID]!, limit: Int = 1000, sort: SortFindByIdscategoryInput): [category]
+  categoryOne(
+    """Filter by fields"""
+    filter: FilterFindOnecategoryInput
+    skip: Int
+    sort: SortFindOnecategoryInput
+  ): category
+  categoryMany(
+    """Filter by fields"""
+    filter: FilterFindManycategoryInput
+    skip: Int
+    limit: Int = 1000
+    sort: SortFindManycategoryInput
+  ): [category]
+  categoryTotal(
+    """Filter by fields"""
+    filter: FiltercategoryInput
+  ): Int
+  categoryConnection(
+    """Forward pagination argument for returning at most first edges"""
+    first: Int
+
+    """Forward pagination argument for returning at most first edges"""
+    after: String
+
+    """Backward pagination argument for returning at most last edges"""
+    last: Int
+
+    """Backward pagination argument for returning at most last edges"""
+    before: String
+
+    """Filter by fields"""
+    filter: FilterFindManycategoryInput
+
+    """Sort argument for data ordering"""
+    sort: SortConnectioncategoryEnum = _ID_DESC
+  ): categoryConnection
+  categoryPagination(
+    """Page number for displaying"""
+    page: Int
+    perPage: Int = 20
+
+    """Filter by fields"""
+    filter: FilterFindManycategoryInput
+    sort: SortFindManycategoryInput
+  ): categoryPagination
+}
+
+type RemoveByIdcategoryPayload {
+  """Removed document ID"""
+  recordId: MongoID
+
+  """Removed document"""
+  record: category
+}
+
+type RemoveManycategoryPayload {
+  """Affected documents number"""
+  numAffected: Int
+}
+
+type RemoveOnecategoryPayload {
+  """Removed document ID"""
+  recordId: MongoID
+
+  """Removed document"""
+  record: category
+}
+
+enum SortConnectioncategoryEnum {
+  _ID_DESC
+  _ID_ASC
+}
+
+enum SortFindByIdscategoryInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  TITLE_ASC
+  TITLE_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+}
+
+enum SortFindManycategoryInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  TITLE_ASC
+  TITLE_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+}
+
+enum SortFindOnecategoryInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  TITLE_ASC
+  TITLE_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+}
+
+enum SortRemoveOnecategoryInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  TITLE_ASC
+  TITLE_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+}
+
+enum SortUpdateManycategoryInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  TITLE_ASC
+  TITLE_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+}
+
+enum SortUpdateOnecategoryInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  TITLE_ASC
+  TITLE_DESC
+  CONTENT_ASC
+  CONTENT_DESC
+}
+
+input TitleOperatorsFiltercategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input TitleOperatorsFilterFindManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input TitleOperatorsFilterFindOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input TitleOperatorsFilterRemoveManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input TitleOperatorsFilterRemoveOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input TitleOperatorsFilterUpdateManycategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input TitleOperatorsFilterUpdateOnecategoryInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input UpdateByIdcategoryInput {
+  name: String
+  title: String
+  content: String
+  _id: MongoID!
+}
+
+type UpdateByIdcategoryPayload {
+  """Updated document ID"""
+  recordId: MongoID
+
+  """Updated document"""
+  record: category
+}
+
+input UpdateManycategoryInput {
+  name: String
+  title: String
+  content: String
+}
+
+type UpdateManycategoryPayload {
+  """Affected documents number"""
+  numAffected: Int
+}
+
+input UpdateOnecategoryInput {
+  name: String
+  title: String
+  content: String
+}
+
+type UpdateOnecategoryPayload {
+  """Updated document ID"""
+  recordId: MongoID
+
+  """Updated document"""
+  record: category
+}

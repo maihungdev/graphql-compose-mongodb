@@ -1,0 +1,691 @@
+input _idOperatorsFilterFindManyuserInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterFindOneuserInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterRemoveManyuserInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterRemoveOneuserInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterUpdateManyuserInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilterUpdateOneuserInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input _idOperatorsFilteruserInput {
+  gt: MongoID
+  gte: MongoID
+  lt: MongoID
+  lte: MongoID
+  ne: MongoID
+  in: [MongoID]
+  nin: [MongoID]
+}
+
+input AgeOperatorsFilterFindManyuserInput {
+  gt: Float
+  gte: Float
+  lt: Float
+  lte: Float
+  ne: Float
+  in: [Float]
+  nin: [Float]
+}
+
+input AgeOperatorsFilterFindOneuserInput {
+  gt: Float
+  gte: Float
+  lt: Float
+  lte: Float
+  ne: Float
+  in: [Float]
+  nin: [Float]
+}
+
+input AgeOperatorsFilterRemoveManyuserInput {
+  gt: Float
+  gte: Float
+  lt: Float
+  lte: Float
+  ne: Float
+  in: [Float]
+  nin: [Float]
+}
+
+input AgeOperatorsFilterRemoveOneuserInput {
+  gt: Float
+  gte: Float
+  lt: Float
+  lte: Float
+  ne: Float
+  in: [Float]
+  nin: [Float]
+}
+
+input AgeOperatorsFilterUpdateManyuserInput {
+  gt: Float
+  gte: Float
+  lt: Float
+  lte: Float
+  ne: Float
+  in: [Float]
+  nin: [Float]
+}
+
+input AgeOperatorsFilterUpdateOneuserInput {
+  gt: Float
+  gte: Float
+  lt: Float
+  lte: Float
+  ne: Float
+  in: [Float]
+  nin: [Float]
+}
+
+input AgeOperatorsFilteruserInput {
+  gt: Float
+  gte: Float
+  lt: Float
+  lte: Float
+  ne: Float
+  in: [Float]
+  nin: [Float]
+}
+
+input CreateManyuserInput {
+  name: String
+  age: Float
+}
+
+type CreateManyuserPayload {
+  """Created document ID"""
+  recordIds: [MongoID]!
+
+  """Created documents"""
+  records: [user]!
+
+  """Count of all documents created"""
+  createCount: Int!
+}
+
+input CreateOneuserInput {
+  name: String
+  age: Float
+}
+
+type CreateOneuserPayload {
+  """Created document ID"""
+  recordId: MongoID
+
+  """Created document"""
+  record: user
+}
+
+input FilterFindManyuserInput {
+  name: String
+  age: Float
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterFindManyuserInput
+  OR: [FilterFindManyuserInput!]
+  AND: [FilterFindManyuserInput!]
+}
+
+input FilterFindOneuserInput {
+  name: String
+  age: Float
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterFindOneuserInput
+  OR: [FilterFindOneuserInput!]
+  AND: [FilterFindOneuserInput!]
+}
+
+input FilterRemoveManyuserInput {
+  name: String
+  age: Float
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterRemoveManyuserInput
+  OR: [FilterRemoveManyuserInput!]
+  AND: [FilterRemoveManyuserInput!]
+}
+
+input FilterRemoveOneuserInput {
+  name: String
+  age: Float
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterRemoveOneuserInput
+  OR: [FilterRemoveOneuserInput!]
+  AND: [FilterRemoveOneuserInput!]
+}
+
+input FilterUpdateManyuserInput {
+  name: String
+  age: Float
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterUpdateManyuserInput
+  OR: [FilterUpdateManyuserInput!]
+  AND: [FilterUpdateManyuserInput!]
+}
+
+input FilterUpdateOneuserInput {
+  name: String
+  age: Float
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilterUpdateOneuserInput
+  OR: [FilterUpdateOneuserInput!]
+  AND: [FilterUpdateOneuserInput!]
+}
+
+input FilteruserInput {
+  name: String
+  age: Float
+  _id: MongoID
+  _ids: [MongoID]
+
+  """List of *indexed* fields that can be filtered via operators."""
+  _operators: OperatorsFilteruserInput
+  OR: [FilteruserInput!]
+  AND: [FilteruserInput!]
+}
+
+"""
+The `ID` scalar type represents a unique MongoDB identifier in collection.
+MongoDB by default use 12-byte ObjectId value
+(https://docs.mongodb.com/manual/reference/bson-types/#objectid). But MongoDB
+also may accepts string or integer as correct values for _id field.
+"""
+scalar MongoID
+
+type Mutation {
+  """
+  Create one document with mongoose defaults, setters, hooks and validation
+  """
+  userCreate(record: CreateOneuserInput!): CreateOneuserPayload
+
+  """
+  Creates Many documents with mongoose defaults, setters, hooks and validation
+  """
+  userCreateMany(records: [CreateManyuserInput!]!): CreateManyuserPayload
+
+  """
+  Update one document: 1) Retrieve one document by findById. 2) Apply updates to
+  mongoose document. 3) Mongoose applies defaults, setters, hooks and
+  validation. 4) And save it.
+  """
+  userUpdateById(record: UpdateByIduserInput!): UpdateByIduserPayload
+
+  """
+  Update one document: 1) Retrieve one document via findOne. 2) Apply updates to
+  mongoose document. 3) Mongoose applies defaults, setters, hooks and
+  validation. 4) And save it.
+  """
+  userUpdateOne(
+    record: UpdateOneuserInput!
+
+    """Filter by fields"""
+    filter: FilterUpdateOneuserInput
+    sort: SortUpdateOneuserInput
+    skip: Int
+  ): UpdateOneuserPayload
+
+  """
+  Update many documents without returning them: Use Query.update mongoose
+  method. Do not apply mongoose defaults, setters, hooks and validation. 
+  """
+  userUpdateMany(
+    record: UpdateManyuserInput!
+
+    """Filter by fields"""
+    filter: FilterUpdateManyuserInput
+    sort: SortUpdateManyuserInput
+    skip: Int
+    limit: Int = 1000
+  ): UpdateManyuserPayload
+
+  """
+  Remove one document: 1) Retrieve one document and remove with hooks via findByIdAndRemove. 2) Return removed document.
+  """
+  userRemoveById(_id: MongoID!): RemoveByIduserPayload
+
+  """
+  Remove one document: 1) Remove with hooks via findOneAndRemove. 2) Return removed document.
+  """
+  userRemoveOne(
+    """Filter by fields"""
+    filter: FilterRemoveOneuserInput
+    sort: SortRemoveOneuserInput
+  ): RemoveOneuserPayload
+
+  """
+  Remove many documents without returning them: Use Query.remove mongoose
+  method. Do not apply mongoose defaults, setters, hooks and validation. 
+  """
+  userRemoveMany(
+    """Filter by fields"""
+    filter: FilterRemoveManyuserInput!
+  ): RemoveManyuserPayload
+}
+
+input NameOperatorsFilterFindManyuserInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterFindOneuserInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterRemoveManyuserInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterRemoveOneuserInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterUpdateManyuserInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilterUpdateOneuserInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+input NameOperatorsFilteruserInput {
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  ne: String
+  in: [String]
+  nin: [String]
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterFindManyuserInput {
+  name: NameOperatorsFilterFindManyuserInput
+  age: AgeOperatorsFilterFindManyuserInput
+  _id: _idOperatorsFilterFindManyuserInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterFindOneuserInput {
+  name: NameOperatorsFilterFindOneuserInput
+  age: AgeOperatorsFilterFindOneuserInput
+  _id: _idOperatorsFilterFindOneuserInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterRemoveManyuserInput {
+  name: NameOperatorsFilterRemoveManyuserInput
+  age: AgeOperatorsFilterRemoveManyuserInput
+  _id: _idOperatorsFilterRemoveManyuserInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterRemoveOneuserInput {
+  name: NameOperatorsFilterRemoveOneuserInput
+  age: AgeOperatorsFilterRemoveOneuserInput
+  _id: _idOperatorsFilterRemoveOneuserInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterUpdateManyuserInput {
+  name: NameOperatorsFilterUpdateManyuserInput
+  age: AgeOperatorsFilterUpdateManyuserInput
+  _id: _idOperatorsFilterUpdateManyuserInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilterUpdateOneuserInput {
+  name: NameOperatorsFilterUpdateOneuserInput
+  age: AgeOperatorsFilterUpdateOneuserInput
+  _id: _idOperatorsFilterUpdateOneuserInput
+}
+
+"""For performance reason this type contains only *indexed* fields."""
+input OperatorsFilteruserInput {
+  name: NameOperatorsFilteruserInput
+  age: AgeOperatorsFilteruserInput
+  _id: _idOperatorsFilteruserInput
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+"""Information about pagination."""
+type PaginationInfo {
+  """Current page number"""
+  currentPage: Int!
+
+  """Number of items per page"""
+  perPage: Int!
+
+  """Total number of pages"""
+  pageCount: Int
+
+  """Total number of items"""
+  itemCount: Int
+
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean
+}
+
+type Query {
+  userById(_id: MongoID!): user
+  userByIds(_ids: [MongoID]!, limit: Int = 1000, sort: SortFindByIdsuserInput): [user]
+  userOne(
+    """Filter by fields"""
+    filter: FilterFindOneuserInput
+    skip: Int
+    sort: SortFindOneuserInput
+  ): user
+  userMany(
+    """Filter by fields"""
+    filter: FilterFindManyuserInput
+    skip: Int
+    limit: Int = 1000
+    sort: SortFindManyuserInput
+  ): [user]
+  userTotal(
+    """Filter by fields"""
+    filter: FilteruserInput
+  ): Int
+  userConnection(
+    """Forward pagination argument for returning at most first edges"""
+    first: Int
+
+    """Forward pagination argument for returning at most first edges"""
+    after: String
+
+    """Backward pagination argument for returning at most last edges"""
+    last: Int
+
+    """Backward pagination argument for returning at most last edges"""
+    before: String
+
+    """Filter by fields"""
+    filter: FilterFindManyuserInput
+
+    """Sort argument for data ordering"""
+    sort: SortConnectionuserEnum = _ID_DESC
+  ): userConnection
+  userPagination(
+    """Page number for displaying"""
+    page: Int
+    perPage: Int = 20
+
+    """Filter by fields"""
+    filter: FilterFindManyuserInput
+    sort: SortFindManyuserInput
+  ): userPagination
+}
+
+type RemoveByIduserPayload {
+  """Removed document ID"""
+  recordId: MongoID
+
+  """Removed document"""
+  record: user
+}
+
+type RemoveManyuserPayload {
+  """Affected documents number"""
+  numAffected: Int
+}
+
+type RemoveOneuserPayload {
+  """Removed document ID"""
+  recordId: MongoID
+
+  """Removed document"""
+  record: user
+}
+
+enum SortConnectionuserEnum {
+  _ID_DESC
+  _ID_ASC
+}
+
+enum SortFindByIdsuserInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  AGE_ASC
+  AGE_DESC
+}
+
+enum SortFindManyuserInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  AGE_ASC
+  AGE_DESC
+}
+
+enum SortFindOneuserInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  AGE_ASC
+  AGE_DESC
+}
+
+enum SortRemoveOneuserInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  AGE_ASC
+  AGE_DESC
+}
+
+enum SortUpdateManyuserInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  AGE_ASC
+  AGE_DESC
+}
+
+enum SortUpdateOneuserInput {
+  _ID_ASC
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  AGE_ASC
+  AGE_DESC
+}
+
+input UpdateByIduserInput {
+  name: String
+  age: Float
+  _id: MongoID!
+}
+
+type UpdateByIduserPayload {
+  """Updated document ID"""
+  recordId: MongoID
+
+  """Updated document"""
+  record: user
+}
+
+input UpdateManyuserInput {
+  name: String
+  age: Float
+}
+
+type UpdateManyuserPayload {
+  """Affected documents number"""
+  numAffected: Int
+}
+
+input UpdateOneuserInput {
+  name: String
+  age: Float
+}
+
+type UpdateOneuserPayload {
+  """Updated document ID"""
+  recordId: MongoID
+
+  """Updated document"""
+  record: user
+}
+
+type user {
+  name: String
+  age: Float
+  _id: MongoID!
+}
+
+"""A connection to a list of items."""
+type userConnection {
+  """Total object count."""
+  count: Int!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """Information to aid in pagination."""
+  edges: [userEdge!]!
+}
+
+"""An edge in a connection."""
+type userEdge {
+  """The item at the end of the edge"""
+  node: user!
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+"""List of items with pagination."""
+type userPagination {
+  """Total object count."""
+  count: Int
+
+  """Array of objects."""
+  items: [user]
+
+  """Information to aid in pagination."""
+  pageInfo: PaginationInfo!
+}
